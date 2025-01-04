@@ -1,10 +1,10 @@
 import express from "express";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import dotenv from "dotenv";
-
 dotenv.config();
 
 const app = express();
+app.use(express.json());
 
 const GEMINI_KEY = process.env.GEMINI_API_KEY || "";
 
